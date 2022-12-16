@@ -11,7 +11,7 @@ def getSha():
     # deserialize JSON bytes to Python object
     tags = json.loads(c)
     # pull latest version sha
-    latest_sha = tags[1]['commit']['sha']
+    latest_sha = tags[0]['commit']['sha']
     return latest_sha
 
 # read file for previous sha
