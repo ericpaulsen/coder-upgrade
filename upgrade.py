@@ -24,7 +24,7 @@ if current_sha != getSha():
   install = 'curl -L https://coder.com/install.sh | sh'
   os.system(install)
   # reload coder service
-  reload = 'sudo systemctl daemon-reload && systemctl restart coder.service'
+  reload = 'sudo systemctl daemon-reload && sudo systemctl restart coder.service'
   os.system(reload)
   # write new sha to file
   with open('sha.txt', 'w') as f:
